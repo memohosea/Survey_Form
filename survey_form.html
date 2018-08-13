@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Survey Form</title>
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <!--link rel="stylesheet" type="text/css" media="screen" href="main.css" /-->
+    <!--script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script-->
+</head>
+
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Let us know how we can improve freeCodeCamp</p>
+    <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input id="name" type="text" name="name" placeholder="Enter your name" required>
+        <br>
+        <label id="email-label" for="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="Enter your Email" required>
+        <br>
+        <label id="number-label" for="age">Age:</label>
+        <input id="number" type="number" name="age" placeholder="Age" min="1" max="100">
+        <br>
+        <label id="dropdown-label" for="role">Which option best describe your role? </label>
+        <select id="dropdown" name="role">
+            <option value="student">Student</option>
+            <option value="full job">Full time Job</option>
+            <option value="ull leraner">Full time Learner</option>
+            <option value="Silent">Prefer not to say</option>
+            <option value="other">Others</option>
+        </select>
+        <br>
+        <label id="" for="referral">How likely that you would recommend reeCodeCamp to a friend</label>
+        <input id="" type="radio" name="referral" value="definitely">Deinitely
+        <input id="" type="radio" name="referral" value="may be">May be
+        <input id="" type="radio" name="referral" value="not sure">Not Sure
+        <br>
+        <label id="" for="improvement">Things that should be improved in the future (Check all that apply):</label>
+        <input id="" type="checkbox" name="improvement" value="Front-end">Front-end Projects
+        <br>
+        <input id="" type="checkbox" name="improvement" value="Back-end">Back-end Projects
+        <br>
+        <input id="" type="checkbox" name="improvement" value="Data Visual">Data Visualization
+        <br>
+        <input id="" type="checkbox" name="improvement" value="Challenges">Challenges
+        <br>
+        <input id="" type="checkbox" name="improvement" value="Open Source">Open Source Community
+        <br>
+        <input id="" type="checkbox" name="improvement" value="Gitter">Gitter help rooms
+        <br>
+        <input id="" type="checkbox" name="improvement" value="Videos">Videos
+        <br>
+        <input id="" type="checkbox" name="improvement" value="City Meets">City Meetups
+        <br>
+        <input id="" type="checkbox" name="improvement" value="Wiki">Wiki
+        <br>
+        <input id="" type="checkbox" name="improvement" value="Forum">Forum
+        <br>
+        <input id="" type="checkbox" name="improvement" value="Add Courses">Additional Courses
+        <br>
+        <label id="" for="suggestion">Any Comments or Suggestions?</label>
+        <textarea placeholder="Enter your comment here..."></textarea>
+        <button type="submit">SUBMIT</button>
+        <br>
+        <input id="submit" type="submit" value="SUBMIT">
+
+    </form>
+</body>
+
+</html>
