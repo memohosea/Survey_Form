@@ -3,69 +3,268 @@
 
 <head>
     <meta charset="utf-8" />
+
     <title>Survey Form</title>
-    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--link rel="stylesheet" type="text/css" media="screen" href="main.css" /-->
-    <!--script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script-->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <style>
+        .main-content {
+            max-width: 100vw;
+            background-color: rgb(128, 192, 216);
+            /*border: 3px solid red;*/
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #form {
+            width: 67%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: white;
+            border-radius: 4px;
+            position: static;
+            font-size: 17px;
+            /*border: 3px solid red;*/
+        }
+
+        p {
+            text-align: center;
+        }
+
+        #row {
+            /*border: 3px solid green;*/
+            position: static;
+            margin: 10px 50px;
+            padding-left: 20px;
+        }
+
+        #label {
+            /*border: 1px solid red;*/
+            display: inline-block;
+            padding-right: 5px;
+            text-align: right;
+            width: 45%;
+            vertical-align: top;
+        }
+
+        #user-input {
+            /*border: 1px solid blue;*/
+            margin-bottom: 15px;
+            display: inline-block;
+            text-align: left;
+            width: 50%;
+            vertical-align: middle;
+        }
+
+        #selected {
+            color: gray;
+        }
+
+        #submit {
+            /*border: 1px solid blue;*/
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 4px;
+            border: 0 solid rgb(128, 192, 216);
+            background-color: rgb(128, 192, 216);
+
+        }
+
+        #name,
+        #email,
+        #age,
+        #dropdown-label,
+        #referral-label,
+        #improvement-label {
+            padding: 3px;
+        }
+
+        textarea {
+            width: 90%;
+        }
+
+        #referral,
+        #improve-on {
+            margin-bottom: 10px;
+        }
+
+        @media screen and (min-width: 250px) and (max-width: 500px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            #form {
+                width: 90%;
+            }
+
+            #row {
+                margin: 0 auto;
+                padding: 5px;
+            }
+
+            #label {
+                padding: 5px;
+                text-align: left;
+                width: 100%;
+            }
+
+            #user-input {
+                padding-left: 10px;
+                width: 100%;
+            }
+
+            #dropdown-label,
+            #referral-label,
+            #improvement-label {
+                margin-left: -5px;
+            }
+        }
+
+        @media screen and (min-width: 501px) and (max-width: 750px) {
+            h1 {
+                font-size: 1.7em;
+            }
+
+            #row {
+                margin: 5px 15px;
+                padding-left: 15px;
+            }
+
+            #form {
+                width: 70%;
+            }
+
+            #label {
+                width: 35%;
+                border: 1px solid purple;
+            }
+
+            #user-input {
+                width: 55%;
+            }
+        }
+    </style>
+
 </head>
 
-<body>
+<body class="main-content">
     <h1 id="title">Survey Form</h1>
-    <p id="description">Let us know how we can improve freeCodeCamp</p>
-    <form id="survey-form">
-        <label id="name-label" for="name">Name:</label>
-        <input id="name" type="text" name="name" placeholder="Enter your name" required>
-        <br>
-        <label id="email-label" for="email">Email:</label>
-        <input id="email" type="email" name="email" placeholder="Enter your Email" required>
-        <br>
-        <label id="number-label" for="age">Age:</label>
-        <input id="number" type="number" name="age" placeholder="Age" min="1" max="100">
-        <br>
-        <label id="dropdown-label" for="role">Which option best describe your role? </label>
-        <select id="dropdown" name="role">
-            <option value="student">Student</option>
-            <option value="full job">Full time Job</option>
-            <option value="ull leraner">Full time Learner</option>
-            <option value="Silent">Prefer not to say</option>
-            <option value="other">Others</option>
-        </select>
-        <br>
-        <label id="" for="referral">How likely that you would recommend reeCodeCamp to a friend</label>
-        <input id="" type="radio" name="referral" value="definitely">Deinitely
-        <input id="" type="radio" name="referral" value="may be">May be
-        <input id="" type="radio" name="referral" value="not sure">Not Sure
-        <br>
-        <label id="" for="improvement">Things that should be improved in the future (Check all that apply):</label>
-        <input id="" type="checkbox" name="improvement" value="Front-end">Front-end Projects
-        <br>
-        <input id="" type="checkbox" name="improvement" value="Back-end">Back-end Projects
-        <br>
-        <input id="" type="checkbox" name="improvement" value="Data Visual">Data Visualization
-        <br>
-        <input id="" type="checkbox" name="improvement" value="Challenges">Challenges
-        <br>
-        <input id="" type="checkbox" name="improvement" value="Open Source">Open Source Community
-        <br>
-        <input id="" type="checkbox" name="improvement" value="Gitter">Gitter help rooms
-        <br>
-        <input id="" type="checkbox" name="improvement" value="Videos">Videos
-        <br>
-        <input id="" type="checkbox" name="improvement" value="City Meets">City Meetups
-        <br>
-        <input id="" type="checkbox" name="improvement" value="Wiki">Wiki
-        <br>
-        <input id="" type="checkbox" name="improvement" value="Forum">Forum
-        <br>
-        <input id="" type="checkbox" name="improvement" value="Add Courses">Additional Courses
-        <br>
-        <label id="" for="suggestion">Any Comments or Suggestions?</label>
-        <textarea placeholder="Enter your comment here..."></textarea>
-        <button type="submit">SUBMIT</button>
-        <br>
-        <input id="submit" type="submit" value="SUBMIT">
+    <section id="form">
+        <p id="description">Let us know how we can improve freeCodeCamp</p>
+        <form id="survey-form">
+            <div id="row">
+                <div id="label">
+                    <label id="name" for="name">Name:</label>
+                </div>
+                <div id="user-input">
+                    <input id="name" type="text" name="name" placeholder="Enter your name" required>
+                </div>
+            </div>
+            <div id="row">
+                <div id="label">
+                    <label id="email" for="email">Email:</label>
+                </div>
+                <div id="user-input">
+                    <input id="email" type="email" name="email" placeholder="Enter your Email" required>
+                </div>
+            </div>
+            <div id="row">
+                <div id="label">
+                    <label id="age" for="age">Age:</label>
+                </div>
+                <div id="user-input">
+                    <input id="age" type="number" name="age" placeholder="Age" min="1" max="100">
+                </div>
+            </div>
+            <div id="row">
+                <div id="label">
+                    <label id="dropdown-label" for="role">Which option describe your current role? </label>
+                </div>
+                <div id="user-input">
+                    <select id="dropdown" name="role">
+                        <option value="student">Student</option>
+                        <option value="fullTimeJob">Full time Job</option>
+                        <option value="fullLeraner">Full time Learner</option>
+                        <option value="Silent">Prefer not to say</option>
+                        <option value="other">Others</option>
+                    </select>
+                </div>
+            </div>
+            <div id="row">
+                <div id="label">
+                    <label id="referral-label" for="referral">How likely is that you would recommend freeCodeCamp to a friend?</label>
+                </div>
+                <div id="user-input">
+                    <input id="referral" type="radio" name="referral" value="definitely">Definitely
+                    <br>
+                    <input id="referral" type="radio" name="referral" value="may be">May be
+                    <br>
+                    <input id="referral" type="radio" name="referral" value="not sure">Not Sure
+                    <br>
+                </div>
+            </div>
+            <div id="row">
+                <div id="label">
+                    <label id="dropdown-label" for="rate-fcc">What do you like most in FCC:</label>
+                </div>
+                <div id="user-input">
+                    <select id="dropdown" name="rate-fcc">
+                        <option id="selected" value="selectOption" disabled selected>Select an option</option>
+                        <option value="challenges">Challenges</option>
+                        <option value="projects">Projects</option>
+                        <option value="community">Community</option>
+                        <option value="openSource">Open Source</option>
+                    </select>
+                </div>
+            </div>
+            <div id="row">
+                <div id="label">
+                    <label id="improvement-label" for="improvement">Things that should be improved in the future (Check all that apply):</label>
+                </div>
+                <div id="user-input">
+                    <input id="improve-on" type="checkbox" name="improvement" value="Front-end">Front-end Projects
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="Back-end">Back-end Projects
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="Data Visual">Data Visualization
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="Challenges">Challenges
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="Open Source">Open Source Community
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="Gitter">Gitter help rooms
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="Videos">Videos
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="City Meets">City Meetups
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="Wiki">Wiki
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="Forum">Forum
+                    <br>
+                    <input id="improve-on" type="checkbox" name="improvement" value="Add Courses">Additional Courses
+                    <br>
+                </div>
+            </div>
+            <div id="row">
+                <div id="label">
+                    <label id="suggestion" for="suggestion">Any Comments or Suggestions?</label>
+                </div>
+                <div id="user-input">
+                    <textarea placeholder="Enter your comment here..."></textarea>
+                </div>
+            </div>
+            <!--button type="submit">SUBMIT</button-->
+            <input id="submit" type="submit" value="SUBMIT">
+        </form>
 
-    </form>
 </body>
 
 </html>
